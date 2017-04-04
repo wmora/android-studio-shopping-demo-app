@@ -36,6 +36,8 @@ import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.Locale;
 
+import io.smooch.ui.ConversationActivity;
+
 import static android.os.Build.ID;
 import static com.manateeworks.manateeworks.R.id.scun;
 
@@ -154,7 +156,7 @@ public class ListActivity extends AppCompatActivity {
 
 
 
-        // googltalk icon in the acction bar and you can use your voice to add item in the list
+        // googltalk icon in the action bar and you can use your voice to add item in the list
         // scun icon is open the scanner and you can add items in the list by scanning the barcode
 
     public boolean onOptionsItemSelected(MenuItem item) {
@@ -168,6 +170,9 @@ public class ListActivity extends AppCompatActivity {
 
                 promptSpeechInput();
 
+                break;
+            case R.id.help:
+                ConversationActivity.show(this);
                 break;
             default:
                 return false;
